@@ -39,7 +39,7 @@ const Home = () => {
             <div className='pb-3 justify-center items-center w-full'>
 
               <div className=''>
-                <span className='text-white font-bold'>Cotação do dia</span>
+                <span className='text-white font-bold'>Cotação do dia em reais</span>
               </div>
 
               <div>
