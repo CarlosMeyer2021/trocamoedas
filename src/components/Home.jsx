@@ -7,7 +7,7 @@ const Home = () => {
   const [dolarDia, setDolarDia] = useState(dataApi)
 
 
-  const url = 'http://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL'
+  const url = 'https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,BTC-BRL'
   axios.get(url)
     .then(response => {
       setDataApi(response.data.USDBRL.ask)
@@ -30,31 +30,47 @@ const Home = () => {
   return (
     <div className=' w-full h-screen flex justify-center items-center  bg-[#191970] text-gray-300 border-[#DAA520]'>
 
-      <div className='w-[800px] h-[200px]'>
+      <div className='w-[500px] h-[200px]'>
 
-        <form action="" className='flex justify-center items-center w-full h-full text-4xl'>
+        <form action="" className='flex justify-center items-center w-full h-full sm:text-2xl md:text-4xl lg:text-4xl'>
 
-          <div className='w-full'>
+          <div className='w-full border-4 border-[#DAA520]'>
 
-            <div className='flex pb-3 justify-start items-center w-full border-4 border-red-900'>
-              <span className='text-white font-bold mr-2'>R$</span>
-              <input type="number" className='font-bold rounded-md text-[#DAA520] w-[140px] bg-transparent ' value={dataApi} />
-              <span className='text-white font-bold'>Cotação do dia</span>
-            </div>
+            <div className='pb-3 justify-center items-center w-full'>
 
-            <div className='flex pb-3 justify-center items-center'>
-
-              <div className='flex justify-start items-start border-4 border-red-400 w-full'>
-                <span className='text-white mr-2 font-bold'>U$</span>
-                <input type="number" className='mr-2 rounded-md text-black w-[140px] font-bold' value={dolar} onChange={capturaValor} />
-                <span className='text-white font-bold'>Dólar americano</span>
+              <div className=''>
+                <span className='text-white font-bold'>Cotação do dia</span>
               </div>
 
+              <div>
+                <span className='text-white font-bold mr-2'>R$</span>
+                <input type="number" className='font-bold rounded-md text-[#DAA520] w-[220px] bg-transparent ' value={dataApi} />
+              </div>
 
             </div>
-            <div className='flex pb-5 justify-start items-center border-4 border-red-700'>
-              <span className='text-white font-bold'>Conversão dólar para real - R$</span>
-              <div className='text-[#DAA520] font-bold'>{dolarDia}</div>
+
+
+
+            <div className='justify-start items-center w-full pb-3 '>
+              <div>
+                <span className='text-white font-bold'>Dólar americano</span>
+              </div>
+              <div>
+                <span className='text-white mr-2 font-bold'>U$</span>
+                <input type="number" className='mr-2 rounded-md text-black w-[220px] font-bold' value={dolar} onChange={capturaValor} />
+              </div>
+
+            </div>
+
+
+            <div className='pb-5 justify-center items-center'>
+              <div>
+                <span className='text-white font-bold'>Conversão dólar para real</span>
+              </div>
+              <div className='flex'>
+                <span className='text-white mr-2 font-bold'>R$</span>
+                <div className='text-[#DAA520] font-bold'>{dolarDia}</div>
+              </div>
             </div>
 
           </div>
