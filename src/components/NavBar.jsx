@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Logo from '../assets/logo.png'
 
 const Navbar = () => {
   return (
-    <div className='fixed w-full h-[80px] flex justify-center items-center  bg-[#191970] text-gray-300  border-b-4 border-[#DAA520] mb-6 px-2'>
+    <div className='fixed w-full h-[80px] flex justify-center items-center  bg-[#191970] text-gray-300  border-b-4 border-[#DAA520] '>
 
       <div className='w-full flex justify-center items-center'>
         <div className='flex justify-center items-center'>
