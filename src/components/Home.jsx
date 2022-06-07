@@ -65,7 +65,7 @@ const Home = () => {
 
             <div className='pb-5 justify-center items-center'>
               <div>
-                <span className='text-white font-bold'>Conversão dólar para real</span>
+                <span className='text-white font-bold'>Conversão de dólar para real</span>
               </div>
               <div className='flex'>
                 <span className='text-white mr-2 font-bold'>R$</span>
