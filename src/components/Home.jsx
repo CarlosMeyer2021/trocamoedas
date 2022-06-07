@@ -57,7 +57,7 @@ const Home = () => {
               </div>
               <div>
                 <span className='text-white mr-2 font-bold'>US$</span>
-                <input type="number" className='mr-2 rounded-md text-black w-[220px] font-bold' value={Number(dolar).toFixed(2)} onChange={capturaValor} />
+                <input type="number" className='mr-2 rounded-md text-black w-[220px] font-bold' value={dolar} onChange={capturaValor} />
               </div>
 
             </div>
